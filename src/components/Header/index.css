@@ -1,0 +1,46 @@
+.header-container {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.line {
+    width: 18vw;
+    height: auto;
+}
+
+.building {
+    width: 21vw;
+    height: auto;
+}
+
+.header-container img {
+    display: inline;
+}
+
+.text-container {
+    padding-top: 50px;
+}
+
+.text-container h1 {
+    color: #F05929;
+    font-size: 3vw;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.text-container .supports {
+    margin-top: 175px;
+    margin-left: 250px;
+    width: 31vw;
+    height: auto;
+}
+
+.text-container h1:nth-child(1) {
+    margin-left: -50px;
+}
+
+.text-container h1:nth-child(2) {
+    margin-left: -25px;
+}

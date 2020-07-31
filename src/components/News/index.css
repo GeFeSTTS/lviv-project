@@ -1,0 +1,77 @@
+.news-container {
+    padding: 100px 110px;
+    background-color: #F7F8FA;
+}
+
+.news-block {
+    background-color: #fff;
+    display: flex;
+    height: 100%;
+    align-items: center;   
+}
+
+.news-container .carousel__slider--horizontal {
+    box-shadow: 0 20px 15px #525A6B1A;
+}
+
+.news-date {
+    height: 100%;
+    width: 70vw;
+    background-image: url('../../assets/news-background.png') ;
+    background-size: cover;
+}
+
+.news-date p {
+    padding-top: 3.5vw;
+    font-size: 60px;
+    text-align: center;
+    color: #F05A2B;
+}
+
+.news-date h5 {
+    color: #fff;
+    margin-top: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.news-info {
+    height: 100%;
+    padding: 2vw 4vw;
+}
+
+.carousel__next-button {
+    padding: 0;
+    border: none;
+    width: 5vw;
+}
+
+.carousel__back-button {
+    padding: 0;
+    border: none;
+    width: 5vw;
+}
+
+.carousel-configuration {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    justify-content: flex-end;
+}
+
+.total-slides {
+    font-family: 'Century Gothic Regular';
+}
+
+.carousel-slides-info {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.news-carousel {
+    margin-top: 50px;
+}
+
+.carousel__slide-focus-ring {
+    outline: none !important;
+}

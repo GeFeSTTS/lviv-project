@@ -1,0 +1,29 @@
+.nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    z-index: 10;
+}
+
+.nav > img {
+    padding-left: 5%
+}
+
+.nav a {
+    cursor: pointer;
+    font-weight: 600;
+    margin: 20px 5px;
+    font-size: 15px;
+}
+
+.nav-container {
+    display: flex;
+    padding-right: 5%;
+}
+
+.nav-container img {
+    display: inline;
+}

@@ -1,0 +1,31 @@
+.about-project-container {
+    background-color: #F7F8FA;
+    padding: 50px 100px;
+}
+
+.about-project-article {
+    border: 1px solid #F05929;
+    padding: 50px 100px;
+}
+
+.title-letter {
+    color: #F05929;
+    font-size: 35px;
+}
+
+.about-project-article p {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.about-project-article h5 {
+    font-family: 'Century Gothic Regular';
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.more-block {
+    cursor: pointer;
+    color: #F05929;
+    font-size: 12px;
+}

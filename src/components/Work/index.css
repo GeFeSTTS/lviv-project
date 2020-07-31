@@ -1,0 +1,332 @@
+.work-container {
+    padding: 0 110px;
+}
+
+.work-container > h5 {
+    font-family: 'Century Gothic Regular';
+}
+
+.work-row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-block {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #F7F8FA;
+    width: 47%;
+    padding: 30px;
+}
+
+.work-block p {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.work-block > h6 {
+    margin-top: 0;
+    font-size: 15px;
+    font-family: 'Century Gothic Regular';
+}
+
+.work-block > h5 {
+    font-family: 'Century Gothic Regular';
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+p.work-first-number-block, p.work-second-number-block, p.work-third-number-block, p.work-third-number-block, p.work-fourth-number-block, p.work-fourth-number-block, p.work-fifth-number-block, p.work-sixth-number-block, p.work-seventh-number-block, p.work-eighth-number-block, p.work-eighth-number-block {
+    font-family: 'Century Gothic Regular';
+    color: #F05A2B;
+    opacity: 0.1;
+    font-size: 120px;
+    left: 33vw;
+    position: absolute;
+}
+
+.work-progress-bar {
+    margin-top: 150px;
+    position: relative;
+}
+
+.left-border {
+    position: absolute;
+    width: 17vw;
+    height: 20px;
+    border: 1px solid #000;
+    border-bottom: none;
+    bottom: 0.3em;
+    left: 20%;
+}
+
+.middle-border {
+    position: absolute;
+    width: 17vw;
+    height: 20px;
+    border: 1px solid #000;
+    border-bottom: none;
+    bottom: 0.3em;
+    left: 40%;
+}
+
+.right-border {
+    position: absolute;
+    width: 17vw;
+    height: 20px;
+    border: 1px solid #000;
+    border-bottom: none;
+    bottom: 0.3em;
+    left: 60%;
+}
+
+.indexedStep {
+    border: 4px solid #E4E5E8;
+    color: white;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.indexedStep.accomplished {
+    border-color: #F05A2B;
+    background-color: #fff;
+}
+
+.RSPBprogressBar {
+    height: 3px;
+}
+
+.RSPBprogressBar .RSPBstep:nth-child(6) .indexedStep {
+    display: none;
+}
+
+.RSPBprogressBar .RSPBprogression {
+    background: #F05A2B;
+}
+
+.work-month {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-month .month {
+    width: 18.5%;
+}
+
+.work-month p {
+    text-transform: uppercase;
+}
+
+.work-main-option ul {
+    padding: 0;
+    margin: 0;
+    margin-left: 20%;
+    margin-bottom: 3%;
+    list-style: none;
+}
+
+.work-main-option ul li {
+    font-size: 15px;
+    color: #545454;
+}
+
+.month ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.month ul li {
+    color: #545454;
+    font-size: 15px;
+}
+
+.month ul li::before, .work-main-option ul li::before {
+    content: "• ";
+    color: #F05A2B;
+}
+
+.work-report {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.report-title {
+    position: relative;
+    width: 60%;
+    border: 2px solid #F05A2B;
+    padding: 50px;
+    box-shadow: -4px 8px 10px #525A6B1A;
+}
+
+.report-title:before {
+    position: absolute; 
+    left: 91%;
+    bottom: 11.2em; 
+    content:'';
+    border-top: 70px solid #F05A2B;
+    border-left: 70px solid transparent;
+}
+
+.report-title:after {
+    position: absolute; 
+    left: 90%;
+    bottom: 10em; 
+    content:'';
+    border-top: 100px solid #fff;
+    border-left: 100px solid transparent;
+}
+
+.report-file {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.report-file h6 {
+    font-family: 'Century Gothic Regular';
+    color: #878787;
+}
+
+.report-file h6 {
+    margin-top: 5px;
+}
+
+.report-file input {
+    padding: 5px 20px;
+    margin-top: 20px;
+    border: 2px solid #E4E5E8;
+    border-radius: 15px;
+    color: #E4E5E8;
+    background-color: #F7F8FA;
+}
+
+@media only screen and (max-width: 1300px)  {
+    .left-border, .middle-border, .right-border {
+        width: 16.5vw;
+    }
+    .left-border {
+        left: 19.8%
+    }
+    .right-border {
+        left: 60.1%
+    }
+
+    .report-title:before {
+        left: 89%;
+        bottom: 14.2em; 
+    }
+
+    .report-title:after {
+        left: 87.5%;
+        bottom: 13.2em;
+    }
+}
+
+@media only screen and (max-width: 1280px)  {
+    p.work-first-number-block, p.work-second-number-block, p.work-third-number-block, p.work-third-number-block, p.work-fourth-number-block, p.work-fourth-number-block, p.work-fifth-number-block, p.work-sixth-number-block, p.work-seventh-number-block, p.work-eighth-number-block, p.work-eighth-number-block {
+        left: 32vw;
+        width: 16.4vw;
+    }
+}
+
+@media only screen and (max-width: 1210px)  {
+    .left-border, .middle-border, .right-border {
+        width: 16.3vw;
+    }
+
+    .report-title:before {
+        left: 88%;
+        bottom: 14.2em; 
+    }
+
+    .report-title:after {
+        left: 86.5%;
+        bottom: 13.2em;
+    }
+}
+
+@media only screen and (max-width: 1203px)  {
+    .report-title:before {
+        left: 88%;
+        bottom: 15.7em; 
+    }
+
+    .report-title:after {
+        left: 86.5%;
+        bottom: 14.6em;
+    }
+}
+
+
+@media only screen and (max-width: 1170px)  {
+    .left-border, .middle-border, .right-border {
+        width: 16vw;
+    }
+
+    .report-title:before {
+        left: 87.8%;
+    }
+}
+
+@media only screen and (max-width: 1110px)  {
+    p.work-first-number-block, p.work-second-number-block, p.work-third-number-block, p.work-third-number-block, p.work-fourth-number-block, p.work-fourth-number-block, p.work-fifth-number-block, p.work-sixth-number-block, p.work-seventh-number-block, p.work-eighth-number-block, p.work-eighth-number-block {
+        left: 30vw;
+    }
+
+    .report-title:before {
+        left: 86.8%;
+    }
+
+    .report-title:after {
+        left: 85.3%;
+    }
+
+}
+
+@media only screen and (max-width: 1095px)  {
+    .report-title:before {
+        bottom: 17.1em;
+    }
+
+    .report-title:after {
+        bottom: 16.1em;
+    }
+
+}
+
+@media only screen and (max-width: 1080px)  {
+    .left-border, .middle-border, .right-border {
+        width: 15.8vw;
+    }
+}
+
+@media only screen and (max-width: 1024px)  {
+    p.work-first-number-block, p.work-second-number-block, p.work-third-number-block, p.work-third-number-block, p.work-fourth-number-block, p.work-fourth-number-block, p.work-fifth-number-block, p.work-sixth-number-block, p.work-seventh-number-block, p.work-eighth-number-block, p.work-eighth-number-block {
+        left: 28vw;
+    }
+
+    .left-border, .middle-border, .right-border {
+        width: 15.6vw;
+    }
+
+    .report-title:before {
+        left: 85.4%;
+    }
+
+    .report-title:after {
+        left: 83.4%;
+    }
+}

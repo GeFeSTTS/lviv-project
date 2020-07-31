@@ -1,0 +1,23 @@
+.tasks-container {
+    padding: 100px 110px;
+}
+
+.tasks-blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasks-blocks div {
+    width: 30%;
+    font-family: 'Century Gothic Regular';
+}
+
+.tasks-blocks p {
+    padding-top: 10px;
+}
+
+.first-number, .second-number, .third-number {
+    position: relative;
+    top: 20%;
+    left: 10%;
+}

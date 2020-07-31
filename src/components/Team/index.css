@@ -1,0 +1,99 @@
+.team-container {
+    padding: 0 110px 50px 110px;
+    background-color: #F7F8FA;
+}
+
+.team-carousel {
+    padding-top: 40px;
+}
+
+.team-block {
+    display: flex;
+    align-items: center;
+}
+
+.team-block img {
+    object-fit: cover;
+}
+
+.team-quote {
+    min-height: 100%;
+    font-family: 'Century Gothic Regular';
+    right: 5%;
+    position: relative;
+    background-color: #fff;
+    padding: 40px 50px;
+    box-shadow: 0 10px 20px #0000001A;
+}
+
+.team-quote h5 {
+    color: #F1592A;
+    margin-bottom: -20px;
+}
+
+.team-personal-info {
+    width: 45%;
+    height: 40%;
+    left: 27em;
+	-webkit-transform: skew(20deg);
+	-moz-transform: skew(20deg);
+	-o-transform: skew(20deg);
+	background: #F05A2B;
+    position: absolute;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.team-personal-info h2, .team-personal-info h6 {
+    font-family: 'Century Gothic Regular';
+    -webkit-transform: skew(-20deg);
+	-moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    color: #fff;
+    font-weight: normal;
+}
+
+.team-personal-info h2 {
+    padding-left: 10%;
+}
+
+.team-personal-info h6 {
+    margin: 0;
+    font-size: 12px;
+    padding-left: 7%;
+}
+
+@media only screen and (max-width: 1300px)  {
+    .team-personal-info {
+        left: 20em;
+    }
+    
+    .team-personal-info h2 {
+        font-size: 17px;
+    }
+
+    .team-personal-info h6 {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 1190px)  {
+    .team-personal-info {
+        left: 19em;
+    }
+    
+    .team-personal-info h2 {
+        font-size: 11px;
+    }
+
+    .team-personal-info h6 {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width: 1170px)  {
+    .team-personal-info {
+        left: 19em;
+        top: 85%;
+    }
+}
