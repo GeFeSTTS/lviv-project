@@ -1,0 +1,16 @@
+.prehistory-container {
+    padding: 100px 110px 50px 110px;
+}
+
+.prehistory-container p {
+    font-family: 'Century Gothic Regular';
+    padding-top: 2%;
+}
+
+.prehistory-container a {
+    color: #F05A2B;
+}
+
+.prehistory-container a:hover {
+    color: #f34a16;
+}

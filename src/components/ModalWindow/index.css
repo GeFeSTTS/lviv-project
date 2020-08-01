@@ -1,3 +1,27 @@
+.ReactModal__Content--after-open {
+    width: 80%;
+    height: auto !important;
+}
+
 .modal .modal-title {
     text-transform: uppercase;
+}
+
+.more-block {
+    font-family: 'Century Gothic Bold';
+}
+
+.modal img {
+    float:left;
+    margin: 0 40px 10px 0;
+}
+
+.modal p {
+    padding-top: 2%;
+    font-family: 'Century Gothic Regular';
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
 }

@@ -1,12 +1,22 @@
 import React from 'react';
+import './index.css'
 
 export default function Prehistory () {
     return (
-        <div id="prehistory">
-            <h1>Prehistory</h1>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget faucibus ex. Vestibulum felis orci, hendrerit sed aliquet in, tristique eu eros. Donec gravida volutpat orci eu tincidunt. Proin non ex ac lectus volutpat luctus. Pellentesque et tellus vel sem dignissim tempus id eu lorem. Quisque ac auctor tortor, tempus volutpat enim. Donec sagittis orci imperdiet dui venenatis, sit amet finibus nibh aliquet. Pellentesque ac malesuada lorem. Nunc sed quam eu sem elementum euismod ut at tellus. Maecenas volutpat libero accumsan lorem vulputate, nec laoreet magna malesuada. Aliquam consequat sem in bibendum scelerisque. In ac faucibus enim.
-
-            Praesent malesuada vestibulum pulvinar. Ut purus lacus, lacinia et dolor et, dictum hendrerit augue. Maecenas sit amet metus eu est efficitur finibus laoreet vel erat. Nulla facilisi. Mauris hendrerit, sem et sodales pretium, nulla orci ullamcorper tortor, hendrerit suscipit dui neque eu orci. Integer porta fringilla commodo. Praesent non malesuada nibh. Praesent blandit felis laoreet, facilisis orci vel, tincidunt mi. Vestibulum nec odio nec elit feugiat maximus. Suspendisse luctus lacinia tempor. Sed ac est ultricies, consectetur velit quis, cursus odio. Nullam in euismod purus. Vivamus tempus semper magna, quis bibendum sem placerat vel. Nunc pharetra feugiat massa. Duis erat odio, aliquam eu sem nec, pellentesque euismod ante.
+        <div className="prehistory-container" id="prehistory">
+            <h1>Як це починалось</h1>
+            <p>
+                <span className="title-letter">І</span>дея фонду культури зафіксована у Стратегії розвитку культури Львова 2025, що стала результатом спільної роботи представників/-ниць міського середовища культури. 
+            </p>
+            <p>
+                Створення Фонду культури Львова є одним із завдань і напрямів статутної діяльності Інституту стратегії культури. У 2018 році ІСК розпочав роботу над створенням фонду. У партнерстві з PPV Knowledge Networks провели зустрічі з стейкхолдерами — представниками культурних середовищ Львова; <a href="/" >Звіт про зустрічі із дієвцями культури.</a> 
+            </p>
+            <p>
+                Агенція PPV Knowledge Networks також забезпечила <a href="/">аналітику практик фінансування культури на місцевому рівні</a> за кордоном (Болгарія, Нідерланди, Велика Британія, Франція, Данія, Польща). 
+            </p>
+            <p>
+                Запит на створення фонду культури залишається актуальним у середовищах культури Львова, що підтверджують результати дослідження Інституту стратегії культури 2019-2020 року — глибинні інтерв’ю з представниками/-цями галузі.
+            </p>
         </div>
     )
 }

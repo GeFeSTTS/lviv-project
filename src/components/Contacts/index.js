@@ -1,12 +1,36 @@
 import React from 'react';
+import './index.css';
 
 export default function Contacts () {
     return (
-        <div id="contacts">
-            <h1>Contacts</h1>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget faucibus ex. Vestibulum felis orci, hendrerit sed aliquet in, tristique eu eros. Donec gravida volutpat orci eu tincidunt. Proin non ex ac lectus volutpat luctus. Pellentesque et tellus vel sem dignissim tempus id eu lorem. Quisque ac auctor tortor, tempus volutpat enim. Donec sagittis orci imperdiet dui venenatis, sit amet finibus nibh aliquet. Pellentesque ac malesuada lorem. Nunc sed quam eu sem elementum euismod ut at tellus. Maecenas volutpat libero accumsan lorem vulputate, nec laoreet magna malesuada. Aliquam consequat sem in bibendum scelerisque. In ac faucibus enim.
-
-            Praesent malesuada vestibulum pulvinar. Ut purus lacus, lacinia et dolor et, dictum hendrerit augue. Maecenas sit amet metus eu est efficitur finibus laoreet vel erat. Nulla facilisi. Mauris hendrerit, sem et sodales pretium, nulla orci ullamcorper tortor, hendrerit suscipit dui neque eu orci. Integer porta fringilla commodo. Praesent non malesuada nibh. Praesent blandit felis laoreet, facilisis orci vel, tincidunt mi. Vestibulum nec odio nec elit feugiat maximus. Suspendisse luctus lacinia tempor. Sed ac est ultricies, consectetur velit quis, cursus odio. Nullam in euismod purus. Vivamus tempus semper magna, quis bibendum sem placerat vel. Nunc pharetra feugiat massa. Duis erat odio, aliquam eu sem nec, pellentesque euismod ante.
+        <div className="contacts-container" id="contacts">
+            <h1>Як дізнатися більше</h1>
+            <div className="contacts-columns">
+                <div className="first-column">
+                    <div className="knowledge-networks">
+                        <p className="title-paragraph">PPV Knowledge Networks</p>
+                        <p><a className="without-underline" href="https://www.ppv.net.ua">www.ppv.net.ua</a></p>
+                        <p><a className="without-underline" href="https://fb.com/ppvknowledgenetworks">fb.com/ppvknowledgenetworks</a></p>
+                    </div>
+                    <div>
+                        <p className="title-paragraph">Володимир Воробей</p>
+                        <h5>Керівник проєкту, директор PPV Knowledge Networks</h5>
+                        <p><a className="without-underline" href="mailto:someuservv@ppv.net.ua">vv@ppv.net.ua</a></p>
+                    </div>
+                </div>
+                <div className="second-column">
+                    <div className="knowledge-networks">
+                        <p className="title-paragraph">Інститут стратегії культури</p>
+                        <p><a className="without-underline" href="https://www.isc.lviv.ua">www.isc.lviv.ua</a></p>
+                        <p><a className="without-underline" href="https://fb.com/csilviv">fb.com/csilviv</a></p>
+                    </div>
+                    <div>
+                        <p className="title-paragraph">Ліда Савченко-Дуда  </p>
+                        <h5>Керівниця напрямку створення міського Фонду культури Інституту стратегії культури</h5>
+                        <p><a className="without-underline" href="mailto:someuservv@gmail.com">li.savchenkoduda.csi@gmail.com</a></p>
+                    </div>
+                </div>   
+            </div>        
         </div>
     )
 }

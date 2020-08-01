@@ -40,6 +40,15 @@
     padding: 2vw 4vw;
 }
 
+.news-info p {
+    font-family: 'Century Gothic Regular';
+}
+
+.news-info h3 {
+    text-transform: uppercase;
+    padding-bottom: 3%;
+}
+
 .carousel__next-button {
     padding: 0;
     border: none;

@@ -1,0 +1,11 @@
+.footer-container {
+    padding: 50px 110px 50px 110px;
+    background-color: #F7F8FA;
+}
+
+.footer-content {
+    border-top: 2px solid #f3f1f1;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}

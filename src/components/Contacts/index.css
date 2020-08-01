@@ -1,0 +1,42 @@
+.contacts-container {
+    padding: 100px 110px 50px 110px;
+    background-color: #F7F8FA;
+}
+
+.contacts-container a {
+    color: #F05A2B;
+}
+
+.without-underline {
+    text-decoration: none;
+}
+
+.without-underline:hover {
+    text-decoration: underline;
+}
+
+.contacts-container p {
+    padding-top: 10px;
+}
+
+.contacts-container h5 {
+    padding-top: 10px;
+    font-family: 'Century Gothic Regular';
+    margin: 0;
+}
+
+p.title-paragraph {
+    padding-top: 30px;
+    font-weight: bold;
+}
+
+.contacts-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts-columns .second-column {
+    width: 50%;
+}
+
+

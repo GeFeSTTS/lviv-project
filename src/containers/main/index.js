@@ -8,6 +8,7 @@ import News from '../../components/News';
 import Team from '../../components/Team';
 import Prehistory from '../../components/Prehistory';
 import Contacts from '../../components/Contacts';
+import Footer from '../../components/Footer';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Team />
       <Prehistory />
       <Contacts />
+      <Footer />
     </div>
   );
 }

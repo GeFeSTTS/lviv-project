@@ -15,6 +15,7 @@ export default function Navbar () {
                     spy={true}
                     smooth={true}
                     duration={500}
+                    offset={-40}
                 >
                     про проєкт
                 </Link>
@@ -35,6 +36,7 @@ export default function Navbar () {
                     spy={true}
                     smooth={true}
                     duration={500}
+                    offset={-100}
                 >
                     робота
                 </Link>
@@ -55,6 +57,7 @@ export default function Navbar () {
                     spy={true}
                     smooth={true}
                     duration={500}
+                    offset={-100}
                 >
                     команда
                 </Link>
