@@ -19,7 +19,7 @@
     justify-content: space-around;
     background-color: #F7F8FA;
     width: 47%;
-    padding: 30px;
+    padding: 2%;
 }
 
 .work-block p {
@@ -38,6 +38,7 @@
     font-weight: normal;
     font-size: 16px;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 p.work-first-number-block, p.work-second-number-block, p.work-third-number-block, p.work-third-number-block, p.work-fourth-number-block, p.work-fourth-number-block, p.work-fifth-number-block, p.work-sixth-number-block, p.work-seventh-number-block, p.work-eighth-number-block, p.work-eighth-number-block {
@@ -232,6 +233,22 @@ p.work-first-number-block, p.work-second-number-block, p.work-third-number-block
     .report-title:after {
         left: 87.5%;
         bottom: 13.2em;
+    }
+}
+
+@media screen and (max-width: 1440px)  {
+    .left-border, .middle-border, .right-border {
+        width: 16.7vw;
+    }
+
+    .report-title:before {
+        left: 90.5%;
+        bottom: 12.7em; 
+    }
+
+    .report-title:after {
+        left: 90.3%;
+        bottom: 11.2em;
     }
 }
 
