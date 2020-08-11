@@ -10,12 +10,15 @@
 
 .title-letter {
     color: #F05929;
-    font-size: 35px;
+    font-size: 30px;
 }
 
-.about-project-article p {
+.about-project-container a {
+    color: #F05A2B;
+}
+
+.about-project-article .title-letter {
     font-weight: bold;
-    font-size: 18px;
 }
 
 .about-project-article h5 {

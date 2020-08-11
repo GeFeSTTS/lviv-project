@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import crosshair from '../../assets/crosshair.svg';
+import ReactHtmlParser from 'react-html-parser';
 import './index.css'
 
 const customStyles = {
@@ -20,7 +21,6 @@ const customStyles = {
   };
 
 export default function ModalWindow ({ info }) {
-    console.log('Info', info);
     const [modalIsOpen, setIsOpen] = useState(false);
 
     const openModal = () => {
@@ -41,13 +41,12 @@ export default function ModalWindow ({ info }) {
           onRequestClose={closeModal}
           portalClassName="modal"
         >   
-            {info.image && <img src={info.image} alt="News" />}
+            {info.validImage && <img src={info.validImage} alt="News" />}
             <div className="modal-header">
               <h3 className="modal-title">{info.title}</h3>
               <input type="image" src={crosshair} alt="crosshair" onClick={closeModal}/>
             </div>      
-            <p>{info.information}</p>
-            <p>{info.additionalInformation}</p>
+            <p>{ReactHtmlParser(info.description)}</p>
         </Modal>
       </div>
     )

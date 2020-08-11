@@ -1,0 +1,42 @@
+.change-idea-form {
+    background-color: bisque;
+    padding-bottom: 50px;
+    border-bottom: 3px solid #fff;
+}
+
+.change-idea-form h5{
+    margin: 0;
+}
+
+.report-form {
+    background-color: blanchedalmond;
+    padding-bottom: 50px;
+    border-bottom: 3px solid #fff;
+}
+
+.report-form h5{
+    margin: 0;
+}
+
+.news-form {
+    background-color: cornsilk;
+    padding-bottom: 50px;
+    border-bottom: 3px solid #fff;
+}
+
+.admin-panel-container ul {
+    margin: 0;
+    padding: 30px 10px;
+    background-color: papayawhip;
+    color: rgb(255, 94, 0);
+}
+
+
+.prehistory-form {
+    background-color: rgb(207, 233, 195);
+    padding-bottom: 50px;
+}
+
+.admin-panel-container form{
+    padding-left: 30px;
+}

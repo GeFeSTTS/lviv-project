@@ -10,6 +10,10 @@
     align-items: center;   
 }
 
+.news-block img {
+    width: 33%;
+}
+
 .news-container .carousel__slider--horizontal {
     box-shadow: 0 20px 15px #525A6B1A;
 }

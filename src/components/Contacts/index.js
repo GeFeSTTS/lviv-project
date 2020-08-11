@@ -4,7 +4,6 @@ import './index.css';
 export default function Contacts () {
     return (
         <div className="contacts-container" id="contacts">
-            <h1>Як дізнатися більше</h1>
             <div className="contacts-columns">
                 <div className="first-column">
                     <div className="knowledge-networks">
@@ -14,7 +13,8 @@ export default function Contacts () {
                     </div>
                     <div>
                         <p className="title-paragraph">Володимир Воробей</p>
-                        <h5>Керівник проєкту, директор PPV Knowledge Networks</h5>
+                        <h5>Керівник проєкту</h5>
+                        <h5>директор PPV Knowledge Networks</h5>
                         <p><a className="without-underline" href="mailto:someuservv@ppv.net.ua">vv@ppv.net.ua</a></p>
                     </div>
                 </div>
