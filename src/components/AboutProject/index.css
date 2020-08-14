@@ -30,5 +30,11 @@
 .more-block {
     cursor: pointer;
     color: #F05929;
+    font-size: 17px;
+}
+
+.less-block {
+    cursor: pointer;
+    color: #F05929;
     font-size: 12px;
 }

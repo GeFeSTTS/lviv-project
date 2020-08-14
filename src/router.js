@@ -11,11 +11,9 @@ export default function AppRouter() {
 	return (
 			<AuthProvider>
 				<Router>
-					<div>
-						<PrivateRoute exact path="/admin-panel" component={AdminPanel} />
-						<Route exact path="/signin" component={SignIn} />
-						<Route exact path="/" component={Main} />
-					</div>
+					<PrivateRoute exact path="/admin-panel" component={AdminPanel} />
+					<Route exact path="/signin" component={SignIn} />
+					<Route exact path="/" component={Main} />
 				</Router>
 			</AuthProvider>
 	);

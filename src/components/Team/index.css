@@ -12,8 +12,8 @@
     align-items: center;
 }
 
-.team-block img {
-    object-fit: cover;
+.firefox-browser {
+    height: 50vh;
 }
 
 .team-quote {
@@ -26,9 +26,15 @@
     box-shadow: 0 10px 20px #0000001A;
 }
 
+.team-quote h4 {
+    font-weight: 100;
+    font-size: 0.9vw;
+}
+
 .team-quote h5 {
     color: #F1592A;
     margin-bottom: -20px;
+    font-size: 0.7vw;
 }
 
 .team-personal-info {
@@ -41,7 +47,6 @@
 	background: #F05A2B;
     position: absolute;
     padding-top: 1%;
-    padding-bottom: 1%;
 }
 
 .team-personal-info h2, .team-personal-info h6 {
@@ -54,46 +59,83 @@
 }
 
 .team-personal-info h2 {
+    font-size: 1.2vw;
     padding-left: 10%;
 }
 
 .team-personal-info h6 {
     margin: 0;
-    font-size: 12px;
+    font-size: 0.7vw;
     padding-left: 7%;
+}
+
+@media only screen and (max-width: 1350px)  {
+    .team-personal-info {
+        left: 20em;
+        top: 85%;
+        height: 30%;
+    }
+    
 }
 
 @media only screen and (max-width: 1300px)  {
     .team-personal-info {
         left: 20em;
-    }
-    
-    .team-personal-info h2 {
-        font-size: 17px;
-    }
-
-    .team-personal-info h6 {
-        font-size: 10px;
-    }
-}
-
-@media only screen and (max-width: 1190px)  {
-    .team-personal-info {
-        left: 19em;
-    }
-    
-    .team-personal-info h2 {
-        font-size: 11px;
-    }
-
-    .team-personal-info h6 {
-        font-size: 8px;
-    }
-}
-
-@media only screen and (max-width: 1170px)  {
-    .team-personal-info {
-        left: 19em;
         top: 85%;
+    }
+}
+
+@media only screen and (max-width: 1290px)  {
+    .team-personal-info {
+        left: 18em;
+        top: 85%;
+    }
+}
+
+@media only screen and (max-width: 1200px)  {
+    .team-personal-info {
+        left: 15em;
+        height: 35%;
+        top: 85%;
+    }
+}
+
+@media only screen and (max-width: 1100px)  {
+    .team-personal-info {
+        left: 13em;
+        height: 28%;
+        top: 92%;
+    }
+}
+
+@media only screen and (max-width: 1020px)  {
+    .team-personal-info {
+        left: 11em;
+        height: 25%;
+        top: 95%;
+    }
+}
+
+@media only screen and (max-width: 990px)  {
+    .team-personal-info {
+        left: 10em;
+        height: 30%;
+        top: 95%;
+    }
+}
+
+@media only screen and (max-width: 950px)  {
+    .team-personal-info {
+        left: 8em;
+        height: 30%;
+        top: 95%;
+    }
+}
+
+@media only screen and (max-width: 920px)  {
+    .team-personal-info {
+        left: 8em;
+        top: 95%;
+        height: 20%;
     }
 }

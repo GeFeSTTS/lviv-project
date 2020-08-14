@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import './index.css';
 import * as firebase from 'firebase';
 
-function AdminPanel(props) {
+function AdminPanel({ history }) {
   const [ideaFirstParagraph, setFirstParagraph] = useState('');
   const [ideaFull, setIdeaFull] = useState('');
   const [reportParagraph, setReportParagraph] = useState('');
@@ -11,6 +13,7 @@ function AdminPanel(props) {
   const [newsFullInfo, setNewsFullInfo] = useState('');
   const [newsPhoto, setNewsPhoto] = useState(null);
   const [preHistoryParagraph, setPreHistoryParagraph] = useState('');
+  const [date, setDate] = useState('');
   
   const onChangeHandler = (event) => {
     const {name, value} = event.currentTarget;
@@ -32,6 +35,10 @@ function AdminPanel(props) {
     } else if(name === 'prehistory-paragraph'){
       setPreHistoryParagraph(value);
     }
+  }
+
+  const changeDateHandler = (date) => {
+    setDate(date);
   }
 
   const changeIdea = (event, ideaFirstParagraph, ideaFull) => {
@@ -65,20 +72,22 @@ function AdminPanel(props) {
 
   const addNews = (event, newsTitle, newsInfo, newsFullInfo, newsPhoto) => {
     event.preventDefault();
-
-    const uploadPhoto = firebase.storage().ref(newsPhoto.name).put(newsPhoto);
-    uploadPhoto.on(
-      "state_changed",
-      snapshot => {},
-      error => {
-        alert(error);
+    
+    if(newsPhoto) {
+      const uploadPhoto = firebase.storage().ref(newsPhoto.name).put(newsPhoto);
+      uploadPhoto.on(
+        "state_changed",
+        snapshot => {},
+        error => {
+          alert(error);
       })
+    }
 
     firebase.firestore().collection('news').add({
       description: newsFullInfo,
       description_short: newsInfo,
       title: newsTitle,
-      date: new Date(),
+      date: date,
       image: `gs://culturefund-d3208.appspot.com/${newsPhoto.name}`
     })
 
@@ -104,20 +113,29 @@ function AdminPanel(props) {
     });
   }
 
+  const signOutUser = () => {
+    firebase.auth().signOut().then(function() {
+      history.push("/signin");
+    })
+  }
+
   return (
     <div className="admin-panel-container">
+      <div className="signout-block">
+        <button className="signout-button" onClick={signOutUser}>Sign Out</button>
+      </div>
       <ul>
         <li>
           Підказка:
-          Для того, щоб перенести речення на нову строку вставте тег &lt;br /&gt; вкінці. Напириклад: "Сьогодні тепла погода. &lt;br /&gt; Завтра йду на озеро"
+          Для того, щоб перенести речення на нову строку вставте тег &lt;br /&gt; вкінці. Наприклад: "Сьогодні тепла погода. &lt;br /&gt; Завтра йду на озеро"
         </li>
         <li>
           Підказка:
-          Для того, щоб зробити абзац вставте два теги &lt;br /&gt; підряд. Напириклад: "Він пішов гуляти з псом. &lt;br /&gt; &lt;br /&gt; Пішов дощ"
+          Для того, щоб зробити абзац вставте два теги &lt;br /&gt; підряд. Наприклад: "Він пішов гуляти з псом. &lt;br /&gt; &lt;br /&gt; Пішов дощ"
         </li>
         <li>
           Підказка:
-          Для того, щоб прикріпити посилання до певної фрази обгорніть фразу тегом &lt;a href="https://google.com"&gt; ... &lt;/a&gt; з обох сторін. Напириклад: "Це посилання буде вести на &lt;a href="https://google.com"&gt; google &lt;/a&gt;"
+          Для того, щоб прикріпити посилання до певної фрази обгорніть фразу тегом &lt;a href="https://google.com"&gt; ... &lt;/a&gt; з обох сторін. Наприклад: "Це посилання буде вести на &lt;a href="https://google.com"&gt; google &lt;/a&gt;"
         </li>
       </ul>
       <form className="change-idea-form">
@@ -184,6 +202,17 @@ function AdminPanel(props) {
       </form>
       <form className="news-form">
         <h1>Інформування та адвокація | Додати новину</h1>
+        <div>
+          <div>
+            <label  className="block">
+              Дата:
+            </label>
+          </div>
+          <DatePicker
+            selected={date}
+            onChange={changeDateHandler}
+          />
+        </div>
         <div>
           <div>
             <label htmlFor="news-title" className="block">

@@ -40,3 +40,17 @@
 .admin-panel-container form{
     padding-left: 30px;
 }
+
+.signout-block {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.signout-button {
+    background-color:rgb(255, 94, 0);
+    border-color: rgb(255, 94, 0);
+    border-radius: 20px;
+    color: #fff;
+    margin: 10px 20px 10px 0;
+    padding: 5px 20px;
+}

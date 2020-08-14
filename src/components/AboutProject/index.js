@@ -27,11 +27,11 @@ export default function AboutProject () {
                 <h1>Яка ідея проекту</h1>
                 {!toggle ? (
                     <h5>
-                        <span className="title-letter">{firstLetter}</span>{ReactHtmlParser(shortIdeaOfProject)} <span className="more-block" style={{display: (!toggle ? 'block' : 'none')}} onClick={() => setToggle(true)}>Більше</span>
+                        <span className="title-letter">{firstLetter}</span>{ReactHtmlParser(shortIdeaOfProject)} <span className="more-block" style={{display: (!toggle ? 'inline' : 'none')}} onClick={() => setToggle(true)}>. . .</span>
                     </h5>
                 ) : (
                     <h5>
-                        <span className="title-letter">{firstLetter}</span>{ReactHtmlParser(ideaOfProject)} <span className="more-block" style={{display: (toggle ? 'block' : 'none')}} onClick={() => setToggle(false)}>Менше</span>
+                        <span className="title-letter">{firstLetter}</span>{ReactHtmlParser(ideaOfProject)} <span className="less-block" style={{display: (toggle ? 'inline' : 'none')}} onClick={() => setToggle(false)}>Менше</span>
                     </h5>
                 )}
             </div>

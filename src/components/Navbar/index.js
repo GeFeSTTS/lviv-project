@@ -1,13 +1,17 @@
 import React from 'react';
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import diagonalLine from '../../assets/diagonal-line.svg';
 import logo from '../../assets/logo.svg';
 import './index.css';
 
 export default function Navbar () {
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    };
+    
     return (
         <nav className="nav" id="navbar">
-            <img src={logo} alt="Logotype" />
+            <img src={logo} alt="Logotype" onClick={scrollToTop}/>
             <div className="nav-container">
                 <Link
                     activeClass="active"

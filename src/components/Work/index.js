@@ -119,7 +119,7 @@ export default function Work () {
                 <div className='month'>
                     <p>Липень</p>
                     <ul>
-                        <li>ввідний аналітичний огляд</li>
+                        <li>ввідний аналітичний огляд <a className="without-underline" href="https://drive.google.com/file/d/1rP3ZKI9DNulOsWeIfC03mMwE06qJR7n3/view">(читати тут)</a></li>
                         <li>публічна презентація проєкту</li>
                         <li>засідання тематичних робочих груп</li>
                     </ul>
@@ -208,7 +208,7 @@ export default function Work () {
                 <div className="report-file">
                     <h5>Кінцевий результат проєкту</h5>
                     <img src={reportFile} alt='Report file' />
-                    <input type="button" value="Завантажит звіт" disabled />
+                    <input type="button" value="Завантажити звіт" disabled />
                     <h6>(у жовтні)</h6>
                 </div>
             </div>

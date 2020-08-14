@@ -6,13 +6,13 @@ import './index.css'
 
 const customStyles = {
     content : {
-      top                   : '300px',
+      top                   : '50%',
       left                  : '50%',
       height                : '50%',
       right                 : 'auto',
       bottom                : 'auto',
       marginRight           : '-50%',
-      transform             : 'translate(-50%, -50%)' 
+      transform             : 'translate(-50%, -50%)'
     },
     overlay : {
       'z-index'             : '9999',
@@ -33,21 +33,23 @@ export default function ModalWindow ({ info }) {
 
 
     return (
+      <>
+        <span className="more-block" onClick={openModal}> . . .</span>
         <div>
-        <span className="more-block" onClick={openModal}> Більше </span>
-        <Modal
-          isOpen={modalIsOpen}
-          style={customStyles}
-          onRequestClose={closeModal}
-          portalClassName="modal"
-        >   
-            {info.validImage && <img src={info.validImage} alt="News" />}
-            <div className="modal-header">
-              <h3 className="modal-title">{info.title}</h3>
-              <input type="image" src={crosshair} alt="crosshair" onClick={closeModal}/>
-            </div>      
-            <p>{ReactHtmlParser(info.description)}</p>
-        </Modal>
-      </div>
+          <Modal
+            isOpen={modalIsOpen}
+            style={customStyles}
+            onRequestClose={closeModal}
+            portalClassName="modal"
+          >   
+              {info.validImage && <img src={info.validImage} alt="News" />}
+              <div className="modal-header">
+                <h3 className="modal-title">{info.title}</h3>
+                <input className="modal-close-btn" type="image" src={crosshair} alt="crosshair" onClick={closeModal}/>
+              </div>      
+              <p>{ReactHtmlParser(info.description)}</p>
+          </Modal>
+        </div>
+      </>
     )
 }

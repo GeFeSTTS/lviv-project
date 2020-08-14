@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import ReactHtmlParser from 'react-html-parser';
 import nextButton from '../../assets/button-next.svg';
-import backButton from '../../assets/button-back.svg';
 import firstPersonTeam from '../../assets/first-person-team.png';
 import secondPersonTeam from '../../assets/second-person-team.png';
 import thirdPersonTeam from '../../assets/third-person-team.png';
@@ -19,7 +19,7 @@ export default function Team () {
     const TEAM = [
         {
             fullName: "Ліда Савченко-Дуда",
-            currentPosition: "керівниця напрямку створення міського Фонду культури Інституту стратегії культури",
+            currentPosition: "керівниця напрямку створення міського <br /> Фонду культури Інституту стратегії культури",
             position: "— кураторка мериторичної групи",
             quote: "«У цьому проєкті ставимо перед собою декілька завдань. Маємо проаналізувати функціональні частини міських фондів культури і розробити комплексну модель фонду. Результати стануть основою для появи в нашому місті нової інституції — Фонду культури Львова: сподіваємося, відповідне рішення про створення нової інституції буде підтримане депутатами міської ради, а також зацікавить інші українські міста. За успішне впровадження цієї практики загалом відповідає середовище культури, адже це для людей культури — можливість для розвитку і реалізації»",
             photo: firstPersonTeam
@@ -38,7 +38,7 @@ export default function Team () {
         }, {
             fullName: "Михайло Мороз",
             currentPosition: "екс-очільник управління культури ЛМР, викладач кафедри культурології УКУ",
-            position: "— проєктний менеджер",
+            position: "— куратор фінансової групи",
             quote: "«Створення Фонду культури для розширення можливостей міської грантової підтримки культурних ініціатив у Львові — одне з пріоритетних завдань, визначених у Стратегії розвитку культури до 2025 року. Приємно, що це завдання не залишилось декларативним, і разом, за підтримки УКФ, вперше в Україні переходимо до напрацювання конкретних механізмів створення та функціонування Фонду. Це непростий виклик, і у кожної з тематичних робочих груп попереду багато роботи. Але переконаний, що ми будемо успішні, і наші результати будуть корисні не лише для Львова, а й для інших зацікавлених міст»",
             photo: fourthPersonTeam
         }, {
@@ -55,6 +55,7 @@ export default function Team () {
     const [shouldNextButtonDisabled, setNextDisabled] = useState(false);
     const [shouldPrevButtonDisabled, setPrevDisabled] = useState(false);
     const handleNextClick = () => {
+        setPrevDisabled(false);
         setCurrentSlide((previousValue) => {
             if(previousValue === TOTAL_SLIDES - 1) {
                 setNextDisabled(true);
@@ -66,7 +67,12 @@ export default function Team () {
         })
     }
 
+    const isFirefox = () => {
+        return navigator.userAgent.indexOf("Firefox") > -1;
+    }
+
     const handlePrevClick = () => {
+        setNextDisabled(false);
         setCurrentSlide((previousValue) => {
             if(previousValue === 0) {
                 setPrevDisabled(true);
@@ -91,22 +97,23 @@ export default function Team () {
                     naturalSlideHeight={35}
                     totalSlides={TOTAL_SLIDES}
                     currentSlide={currentSlide}
+                    dragEnabled={false}
                     isIntrinsicHeight
                 >
                     <Slider>
-                    {TEAM.map(el => {
+                    {TEAM.map((el, id) => {
                         return (
-                            <Slide index={0}>
+                            <Slide key={id} index={0}>
                                 <div className="team-block">
-                                    <img src={el.photo} alt="Lida Savchenko-Duda" />
-                                    <p className="team-quote">
-                                        {el.quote}
+                                    <img className={isFirefox() ? 'firefox-browser' : null}src={el.photo} alt="Lida Savchenko-Duda" />
+                                    <div className="team-quote">
+                                        <h4>{el.quote}</h4>
                                         <h5>{el.position}</h5>
                                         <div className="team-personal-info">
                                             <h2>{el.fullName}</h2>
-                                            <h6>{el.currentPosition}</h6>
+                                            <h6>{ReactHtmlParser(el.currentPosition)}</h6>
                                         </div>
-                                    </p>
+                                    </div>
                                 </div>
                             </Slide>
                         )
@@ -114,7 +121,7 @@ export default function Team () {
 
                     </Slider>
                     <div className="carousel-configuration">
-                        <ButtonBack disabled={shouldPrevButtonDisabled}><RenderButton img={backButton} handleClick={handlePrevClick} /></ButtonBack>
+                        <ButtonBack disabled={shouldPrevButtonDisabled}><RenderButton img={nextButton} handleClick={handlePrevClick} /></ButtonBack>
                         <div className="carousel-slides-info">
                             <span className='current-slide'>{`${currentSlide + 1}/`}</span>
                             <span className='total-slides'>{TOTAL_SLIDES}</span>

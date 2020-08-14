@@ -1,5 +1,5 @@
 .contacts-container {
-    padding: 50px 110px 50px 110px;
+    padding: 20px 110px 20px 110px;
     background-color: #F7F8FA;
 }
 
@@ -16,17 +16,17 @@
 }
 
 .contacts-container p {
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .contacts-container h5 {
-    padding-top: 10px;
+    padding-top: 5px;
     font-family: 'Century Gothic Regular';
     margin: 0;
 }
 
 p.title-paragraph {
-    padding-top: 30px;
+    padding-top: 18px;
     font-weight: bold;
 }
 

@@ -11,6 +11,10 @@
 }
 
 .news-block img {
+    width: 25%;
+}
+
+.news-block img.firefoxImage {
     width: 33%;
 }
 
@@ -87,4 +91,12 @@
 
 .carousel__slide-focus-ring {
     outline: none !important;
+}
+
+.carousel__back-button img {
+    transform: rotate(180deg);
+}
+
+.carousel-configuration button:disabled {
+    opacity: 0.4
 }

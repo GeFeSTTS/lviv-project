@@ -214,6 +214,11 @@ p.work-first-number-block, p.work-second-number-block, p.work-third-number-block
     background-color: #F7F8FA;
 }
 
+.month .without-underline {
+    text-decoration: none;
+    color: #F05929;
+}
+
 @media screen and (min-width: 1700px)  {
     .left-border, .middle-border, .right-border {
         width: 17.6vw;

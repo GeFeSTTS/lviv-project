@@ -3,7 +3,6 @@ import './index.css';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import nextButton from '../../assets/button-next.svg';
-import backButton from '../../assets/button-back.svg';
 import ModalWindow from '../ModalWindow';
 import ReactHtmlParser from 'react-html-parser';
 import * as firebase from 'firebase';
@@ -23,6 +22,10 @@ export default function News () {
     useEffect( () => {
         getAndParseNews();
     }, [])
+
+    const isFirefox = () => {
+        return navigator.userAgent.indexOf("Firefox") > -1;
+    }
 
     const getAndParseNews = async () => {
         const rootRef = await firebase.firestore().collection('news').get();
@@ -48,12 +51,35 @@ export default function News () {
             el.day = day;
             el.validImage = `https://firebasestorage.googleapis.com/v0/b/culturefund-d3208.appspot.com/o/${imageName}?alt=media`
         })
+
+        if(data.length === 1) {
+            setPrevDisabled(true);
+            setNextDisabled(true);
+        }
+
+        function compare(a, b) {
+            const secondsA = a.date.seconds;
+            const secondsB = b.date.seconds;
+          
+            let comparison = 0;
+            if (secondsA > secondsB) {
+              comparison = -1;
+            } else if (secondsA < secondsB) {
+              comparison = 1;
+            }
+            return comparison;
+          }
+
+        data.sort(compare)
         setNews(data)
-        console.log('News', data)
     }
 
     const handleNextClick = () => {
         setCurrentSlide((previousValue) => {
+            if(news.length !== 1) {
+                setPrevDisabled(false);
+            }
+
             if(previousValue === news.length - 1) {
                 setNextDisabled(true);
                 return previousValue;
@@ -65,6 +91,10 @@ export default function News () {
     }
 
     const handlePrevClick = () => {
+        if(news.length !== 1) {
+            setNextDisabled(false);
+        }
+        
         setCurrentSlide((previousValue) => {
             if(previousValue === 0) {
                 setPrevDisabled(true);
@@ -78,22 +108,23 @@ export default function News () {
 
     return (
         <div className="news-container" id="news">
-            <h1>Інформування та адвокація</h1>
+            <h1>Хто підтримує і що нового</h1>
             <div className="news-carousel">
                 <CarouselProvider
                     naturalSlideWidth={100}
                     naturalSlideHeight={18}
                     totalSlides={news.length}
                     currentSlide={currentSlide}
+                    dragEnabled={false}
                     isIntrinsicHeight
                 >
                     <Slider>
                         {news.map((el, index) => {
                             return (
-                                <Slide index={index}>
+                                <Slide key={index} index={index}>
                                     <div className="news-block">
                                         {el.validImage ? (
-                                            <img src={el.validImage} alt="First news" />) : (                                
+                                            <img src={el.validImage} className={isFirefox() ? 'firefoxImage' : null } alt="First news" />) : (                                
                                             <div className="news-date">
                                                 <p>{el.day}</p>
                                                 <h5>{el.month}</h5>
@@ -109,7 +140,7 @@ export default function News () {
                         })}
                     </Slider>
                     <div className="carousel-configuration">
-                        <ButtonBack disabled={shouldPrevButtonDisabled}><RenderButton img={backButton} handleClick={handlePrevClick} /></ButtonBack>
+                        <ButtonBack disabled={shouldPrevButtonDisabled}><RenderButton img={nextButton} handleClick={handlePrevClick} /></ButtonBack>
                         <div className="carousel-slides-info">
                             <span className='current-slide'>{`${currentSlide + 1}/`}</span>
                             <span className='total-slides'>{news.length}</span>
