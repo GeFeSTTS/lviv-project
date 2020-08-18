@@ -10,7 +10,7 @@ export default function Header () {
             <img className="line" src={lineCircle} alt="Logotype" />
             <div className="text-container">
                 <h1>Можливості</h1>
-                <h1>та механізми</h1>
+                <h1>та механізми створення</h1>
                 <h1>міських фондів культури</h1> 
                 <img className="supports" src={supports} alt="Supports" />
             </div>

@@ -49,7 +49,7 @@ export default function Work () {
             <div className="work-progress-bar">
                 <div className="work-main-option">
                     <ul>
-                        <li>юридичний супровід</li>
+                        <li>юридичний супровід розробки базової моделі фонду на всіх етапах проєкту</li>
                     </ul>
                 </div>
                 <div className="work-border-block">
@@ -128,7 +128,7 @@ export default function Work () {
                     <p>Серпень</p>
                     <ul>
                         <li>засідання загальної робочої групи</li>
-                        <li>аналітичні огляди</li>
+                        <li>тематичні аналітичні огляди</li>
                         <li>експертні рецензії</li>
                     </ul>
                 </div>
@@ -138,6 +138,7 @@ export default function Work () {
                         <li>засідання загальної робочої групи</li>
                         <li>публічне обговорення напрацювань</li>
                         <li>проєкт рішення про створення Фонду культури Львова</li>
+                        <li>засідання тематичних робочих груп</li>
                     </ul>
                 </div>
                 <div className='month'>
