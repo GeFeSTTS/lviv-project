@@ -21,3 +21,39 @@
     top: 20%;
     left: 10%;
 }
+
+@media only screen and (max-width: 1000px) {
+    .tasks-container {
+        padding: 20px 15px;
+    }
+
+    .tasks-blocks {
+        flex-direction: column;
+    }
+
+    .tasks-blocks div {
+        margin-top: 4%;
+        width: 100%;
+        position: relative;
+    }
+
+    .first-number, .second-number, .third-number {
+        top: 0;
+        left: 5%;
+        position: absolute;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .first-number, .second-number, .third-number {
+        top: 0;
+        left: 7%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .first-number, .second-number, .third-number {
+        top: 0;
+        left: 10%;
+    }
+}

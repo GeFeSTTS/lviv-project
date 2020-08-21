@@ -97,7 +97,6 @@ export default function Team () {
                     naturalSlideHeight={35}
                     totalSlides={TOTAL_SLIDES}
                     currentSlide={currentSlide}
-                    dragEnabled={false}
                     isIntrinsicHeight
                 >
                     <Slider>

@@ -46,106 +46,117 @@ export default function Work () {
             <h1>Як ми працюємо</h1>
             <p>Проєкт реалізовується із червня по жовтень 2020 року. Учасники робочих груп, аналітики, зовнішні експерти та рецензенти проаналізують різні функціональні частини фонду і запропонують його комплексну модель.</p>
             
-            <div className="work-progress-bar">
-                <div className="work-main-option">
-                    <ul>
-                        <li>юридичний супровід розробки базової моделі фонду на всіх етапах проєкту</li>
-                    </ul>
-                </div>
-                <div className="work-border-block">
-                    <div className="left-border"></div>
-                    <div className="middle-border"></div>
-                    <div className="right-border"></div>
-                </div>
-                <ProgressBar percent={percents}>
-                    <Step>
-                        {({ accomplished }) => (
-                        <div
-                            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-                        >
+            <div className="progress-container">
+                <div className="work-progress-bar-container">
+                    <div className="work-progress-bar">
+                        <div className="work-main-option">
+                            <ul>
+                                <li>юридичний супровід розробки базової моделі фонду на всіх етапах проєкту</li>
+                            </ul>
                         </div>
-                        )}
-                    </Step>
-                    <Step>
-                        {({ accomplished }) => (
-                        <div
-                            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-                        >
+                        <div className="work-border-block">
+                            <div className="left-border"></div>
+                            <div className="middle-border"></div>
+                            <div className="right-border"></div>
                         </div>
-                        )}
-                    </Step>
-                    <Step>
-                        {({ accomplished }) => (
-                        <div
-                            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-                        >
-                        </div>
-                        )}
-                    </Step>
-                    <Step>
-                        {({ accomplished }) => (
-                        <div
-                            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-                        >
-                        </div>
-                        )}
-                    </Step>
-                    <Step>
-                        {({ accomplished }) => (
-                        <div
-                            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-                        >
-                        </div>
-                        )}
-                    </Step>
-                    <Step>
-                        {({ accomplished }) => (
-                        <div
-                            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-                        >
-                        </div>
-                        )}
-                    </Step>
-                </ProgressBar>
-            </div>
-            <div className='work-month'>
-                <div className='month'>
-                    <p>Червень</p>
-                    <ul>
-                        <li>старт проєкту</li>
-                        <li>відбір до тематичних робочих груп</li>
-                    </ul>
+                        <ProgressBar percent={percents}>
+                            <Step>
+                                {({ accomplished }) => (
+                                <div
+                                    className={`indexedStep ${accomplished ? "accomplished" : null}`}
+                                >
+                                </div>
+                                )}
+                            </Step>
+                            <Step>
+                                {({ accomplished }) => (
+                                <div
+                                    className={`indexedStep ${accomplished ? "accomplished" : null}`}
+                                >
+                                </div>
+                                )}
+                            </Step>
+                            <Step>
+                                {({ accomplished }) => (
+                                <div
+                                    className={`indexedStep ${accomplished ? "accomplished" : null}`}
+                                >
+                                </div>
+                                )}
+                            </Step>
+                            <Step>
+                                {({ accomplished }) => (
+                                <div
+                                    className={`indexedStep ${accomplished ? "accomplished" : null}`}
+                                >
+                                </div>
+                                )}
+                            </Step>
+                            <Step>
+                                {({ accomplished }) => (
+                                <div
+                                    className={`indexedStep ${accomplished ? "accomplished" : null}`}
+                                >
+                                </div>
+                                )}
+                            </Step>
+                            <Step>
+                                {({ accomplished }) => (
+                                <div
+                                    className={`indexedStep ${accomplished ? "accomplished" : null}`}
+                                >
+                                </div>
+                                )}
+                            </Step>
+                        </ProgressBar>
+                    </div>
                 </div>
-                <div className='month'>
-                    <p>Липень</p>
-                    <ul>
-                        <li>ввідний аналітичний огляд <a className="without-underline" href="https://drive.google.com/file/d/1rP3ZKI9DNulOsWeIfC03mMwE06qJR7n3/view">(читати тут)</a></li>
-                        <li>публічна презентація проєкту</li>
-                        <li>засідання тематичних робочих груп</li>
-                    </ul>
+                <div className='work-month-mobile'>
+                    <p>червень</p>
+                    <p>липень</p>
+                    <p>серпень</p>
+                    <p>вересень</p>
+                    <p>жовтень</p>
                 </div>
-                <div className='month'>
-                    <p>Серпень</p>
-                    <ul>
-                        <li>засідання загальної робочої групи</li>
-                        <li>тематичні аналітичні огляди</li>
-                        <li>експертні рецензії</li>
-                    </ul>
-                </div>
-                <div className='month'>
-                    <p>Вересень</p>
-                    <ul>
-                        <li>засідання загальної робочої групи</li>
-                        <li>публічне обговорення напрацювань</li>
-                        <li>проєкт рішення про створення Фонду культури Львова</li>
-                        <li>засідання тематичних робочих груп</li>
-                    </ul>
-                </div>
-                <div className='month'>
-                    <p>Жовтень</p>
-                    <ul>
-                        <li>аналітичний звіт</li>
-                    </ul>
+                <div className='work-month'>
+                    <div className='month'>
+                        <p>Червень</p>
+                        <ul>
+                            <li>старт проєкту</li>
+                            <li>відбір до тематичних робочих груп</li>
+                        </ul>
+                    </div>
+                    <div className='month'>
+                        <p>Липень</p>
+                        <ul>
+                            <li>ввідний аналітичний огляд <a className="without-underline" href="https://drive.google.com/file/d/1rP3ZKI9DNulOsWeIfC03mMwE06qJR7n3/view">(читати тут)</a></li>
+                            <li>публічна презентація проєкту</li>
+                            <li>засідання тематичних робочих груп</li>
+                        </ul>
+                    </div>
+                    <div className='month'>
+                        <p>Серпень</p>
+                        <ul>
+                            <li>засідання загальної робочої групи</li>
+                            <li>тематичні аналітичні огляди</li>
+                            <li>експертні рецензії</li>
+                        </ul>
+                    </div>
+                    <div className='month'>
+                        <p>Вересень</p>
+                        <ul>
+                            <li>засідання загальної робочої групи</li>
+                            <li>публічне обговорення напрацювань</li>
+                            <li>проєкт рішення про створення Фонду культури Львова</li>
+                            <li>засідання тематичних робочих груп</li>
+                        </ul>
+                    </div>
+                    <div className='month'>
+                        <p>Жовтень</p>
+                        <ul>
+                            <li>аналітичний звіт</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             

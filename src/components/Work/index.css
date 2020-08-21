@@ -120,6 +120,10 @@ p.work-first-number-block, p.work-second-number-block, p.work-third-number-block
     justify-content: space-between;
 }
 
+.work-month-mobile {
+    display: none;
+}
+
 .work-month .month {
     width: 18.5%;
 }
@@ -385,3 +389,46 @@ p.work-first-number-block, p.work-second-number-block, p.work-third-number-block
         left: 83.4%;
     }
 }
+
+@media only screen and (max-width: 1000px)  {
+    .work-container {
+        padding: 30px 15px;
+    }
+
+    .work-month {
+        flex-direction: column;
+    }
+
+    .work-month .month {
+        width: 100%;
+        margin-top: 3%;
+    }
+
+    .work-month-mobile {
+        display: flex;
+        justify-content: space-between;
+        margin-left: -2%;
+        margin-top: 1%;
+    }
+
+    .work-month-mobile p {
+        width: 19%;
+        font-size: 2.5vw;
+    }
+
+    .left-border, .middle-border, .right-border {
+        width: 19.3vw;
+    }
+
+    .work-main-option ul {
+        margin-bottom: 5%;
+        margin-right: 20%;
+    }
+}
+
+@media only screen and (max-width: 500px)  {
+    .left-border, .middle-border, .right-border {
+        width: 19vw;
+    }
+}
+
