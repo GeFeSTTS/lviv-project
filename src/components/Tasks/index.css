@@ -39,21 +39,26 @@
 
     .first-number, .second-number, .third-number {
         top: 0;
-        left: 5%;
+        left: 4%;
+        font-size: 2em;
         position: absolute;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .first-number, .second-number, .third-number {
+        left: 8%;
     }
 }
 
 @media only screen and (max-width: 530px) {
     .first-number, .second-number, .third-number {
-        top: 0;
         left: 7%;
     }
 }
 
 @media only screen and (max-width: 400px) {
     .first-number, .second-number, .third-number {
-        top: 0;
         left: 10%;
     }
 }

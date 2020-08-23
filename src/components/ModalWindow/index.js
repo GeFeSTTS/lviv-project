@@ -42,6 +42,7 @@ export default function ModalWindow ({ info }) {
             onRequestClose={closeModal}
             portalClassName="modal"
           >   
+              <input className="modal-close-btn-mobile" type="image" src={crosshair} alt="crosshair" onClick={closeModal}/>
               {info.validImage && <img src={info.validImage} alt="News" />}
               <div className="modal-header">
                 <h3 className="modal-title">{info.title}</h3>

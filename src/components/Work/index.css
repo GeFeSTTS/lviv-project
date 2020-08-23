@@ -255,6 +255,26 @@ p.work-first-number-block, p.work-second-number-block, p.work-third-number-block
     }
 }
 
+@media only screen and (max-width: 1600px)  {
+    .left-border, .middle-border, .right-border {
+        width: 17vw;
+    }
+
+}
+
+@media only screen and (max-width: 1530px)  {
+    .left-border, .middle-border, .right-border {
+        width: 17.1vw;
+    }
+
+}
+
+@media only screen and (max-width: 1485px)  {
+    .left-border, .middle-border, .right-border {
+        width: 16.9vw;
+    }
+
+}
 
 @media screen and (max-width: 1440px)  {
     .left-border, .middle-border, .right-border {
@@ -270,6 +290,13 @@ p.work-first-number-block, p.work-second-number-block, p.work-third-number-block
         left: 89.2%;
         top: -0.7em; 
     }
+}
+
+@media only screen and (max-width: 1357px)  {
+    .left-border, .middle-border, .right-border {
+        width: 16.6vw;
+    }
+
 }
 
 @media only screen and (max-width: 1300px)  {
@@ -395,25 +422,30 @@ p.work-first-number-block, p.work-second-number-block, p.work-third-number-block
         padding: 30px 15px;
     }
 
+    .work-container > p {
+        padding: 15px 0 30px 0;
+    }
+
     .work-month {
         flex-direction: column;
     }
 
     .work-month .month {
         width: 100%;
-        margin-top: 3%;
+        margin-top: 5%;
     }
 
     .work-month-mobile {
         display: flex;
         justify-content: space-between;
         margin-left: -2%;
-        margin-top: 1%;
+        margin-top: 2.5%;
     }
 
     .work-month-mobile p {
         width: 19%;
-        font-size: 2.5vw;
+        text-transform: uppercase;
+        font-size: 70%;
     }
 
     .left-border, .middle-border, .right-border {
@@ -424,11 +456,304 @@ p.work-first-number-block, p.work-second-number-block, p.work-third-number-block
         margin-bottom: 5%;
         margin-right: 20%;
     }
+
+    .work-row {
+        margin-top: 0;
+        flex-direction: column;
+    }
+
+    .work-block {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .work-block h5 {
+        width: 70%;
+        margin-bottom: 2%;
+    }
+
+    p.work-first-number-block, p.work-second-number-block, p.work-third-number-block, p.work-third-number-block, p.work-fourth-number-block, p.work-fourth-number-block, p.work-fifth-number-block, p.work-sixth-number-block, p.work-seventh-number-block, p.work-eighth-number-block, p.work-eighth-number-block {
+        left: 65vw;
+    }
+
+    .work-report {
+        flex-direction: column;
+    }
+
+    .report-title {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .report-title:before {
+        left: 91.5%;
+        border-top: 50px solid #F05A2B;
+        border-left: 50px solid transparent;
+    }
+    
+    .report-title:after {
+        left: 90%;
+        border-top: 60px solid #fff;
+        border-left: 60px solid transparent;
+    }
+
+}
+
+@media only screen and (max-width: 590px)  {
+    .report-title:before {
+        left: 91.3%;
+    }
+
+    .work-main-option ul {
+        margin-bottom: 10%;
+    }
+}
+
+@media only screen and (max-width: 570px)  {
+    .report-title:before {
+        left: 91.1%;
+    }
+
+    .report-title:after {
+        left: 89.6%;
+    }
+}
+
+@media only screen and (max-width: 560px)  {
+    .report-title:before {
+        left: 90.8%;
+    }
+
+    .report-title:after {
+        left: 89.4%;
+    }
+}
+
+@media only screen and (max-width: 550px)  {
+    .report-title:before {
+        left: 90.6%;
+    }
+
+    .report-title:after {
+        left: 89.2%;
+    }
+}
+
+@media only screen and (max-width: 530px)  {
+    .report-title:before {
+        left: 90.4%;
+    }
+
+    .report-title:after {
+        left: 89%;
+    }
+}
+
+@media only screen and (max-width: 520px)  {
+    .report-title:before {
+        left: 90.2%;
+    }
+
+    .report-title:after {
+        left: 88.7%;
+    }
+}
+
+@media only screen and (max-width: 510px)  {
+    .report-title:before {
+        left: 90%;
+    }
+
+    .report-title:after {
+        left: 88.5%;
+    }
 }
 
 @media only screen and (max-width: 500px)  {
     .left-border, .middle-border, .right-border {
         width: 19vw;
+    }
+
+    .report-title:before {
+        left: 89.8%;
+    }
+
+    .report-title:after {
+        left: 88.3%;
+    }
+}
+
+@media only screen and (max-width: 490px)  {
+    .report-title:before {
+        left: 89.4%;
+    }
+
+    .report-title:after {
+        left: 88%;
+    }
+}
+
+@media only screen and (max-width: 480px)  {
+    .report-title:before {
+        left: 89.2%;
+    }
+
+    .report-title:after {
+        left: 87.7%;
+    }
+}
+
+@media only screen and (max-width: 470px)  {
+    .report-title:before {
+        left: 89%;
+    }
+
+    .report-title:after {
+        left: 87.3%;
+    }
+}
+
+@media only screen and (max-width: 460px)  {
+    .report-title:before {
+        left: 88.7%;
+    }
+
+    .report-title:after {
+        left: 87%;
+    }
+}
+
+@media only screen and (max-width: 450px)  {
+    .report-title:before {
+        left: 88.4%;
+    }
+
+    .report-title:after {
+        left: 86.7%;
+    }
+}
+
+@media only screen and (max-width: 440px)  {
+    .report-title:before {
+        left: 88.1%;
+    }
+
+    .report-title:after {
+        left: 86.3%;
+    }
+}
+
+@media only screen and (max-width: 430px)  {
+    .report-title:before {
+        left: 87.8%;
+    }
+
+    .report-title:after {
+        left: 85.8%;
+    }
+}
+
+@media only screen and (max-width: 410px)  {
+    .report-title:before {
+        left: 87.3%;
+    }
+
+    .report-title:after {
+        left: 85.2%;
+    }
+}
+
+@media only screen and (max-width: 400px)  {
+    .report-title:before {
+        left: 86.8%;
+    }
+
+    .report-title:after {
+        left: 84.7%;
+    }
+}
+
+@media only screen and (max-width: 390px)  {
+    .report-title:before {
+        left: 86.4%;
+    }
+
+    .report-title:after {
+        left: 84.4%;
+    }
+}
+
+@media only screen and (max-width: 380px)  {
+    .report-title:before {
+        left: 86.1%;
+    }
+
+    .report-title:after {
+        left: 83.7%;
+    }
+}
+
+@media only screen and (max-width: 370px)  {
+    .report-title:before {
+        left: 85.7%;
+    }
+
+    .report-title:after {
+        left: 83.3%;
+    }
+}
+
+@media only screen and (max-width: 360px)  {
+    .report-title:before {
+        left: 85.4%;
+    }
+
+    .report-title:after {
+        left: 83%;
+    }
+}
+
+@media only screen and (max-width: 350px)  {
+    .report-title:before {
+        left: 84.7%;
+    }
+
+    .report-title:after {
+        left: 82.3%;
+    }
+
+    .left-border, .middle-border, .right-border {
+        width: 18.7vw;
+    }
+}
+
+@media only screen and (max-width: 330px)  {
+    .report-title:before {
+        left: 83.5%;
+    }
+
+    .report-title:after {
+        left: 80.8%;
+    }
+}
+
+@media only screen and (max-width: 320px)  {
+    .report-title:before {
+        left: 83%;
+    }
+
+    .report-title:after {
+        left: 80%;
+    }
+}
+
+@media only screen and (max-width: 300px)  {
+    .report-title:before {
+        left: 81.5%;
+    }
+
+    .report-title:after {
+        left: 78.5%;
     }
 }
 

@@ -100,3 +100,26 @@
 .carousel-configuration button:disabled {
     opacity: 0.4
 }
+
+@media only screen and (max-width: 1000px)  {
+
+    .news-container {
+        padding: 20px 20px;
+    }
+
+    .news-block {
+        flex-direction: column;
+    }
+
+    .news-block img {
+        width: 100%;
+    }
+
+    .news-block img.firefoxImage {
+        width: 100%;
+    }
+
+    .carousel-configuration {
+        display: none;
+    }
+}

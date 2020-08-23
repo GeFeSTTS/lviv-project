@@ -3,6 +3,10 @@
     height: auto !important;
 }
 
+.modal-close-btn-mobile {
+    display: none;
+}
+
 .ReactModal__Html--open,
 .ReactModal__Body--open {
   overflow: hidden; /* prevents background page from scrolling when the modal is open */
@@ -44,7 +48,7 @@
 }
 
 .modal img {
-    float:left;
+    float: left;
     width: 33%;
     margin: 0 40px 10px 0;
 }
@@ -57,4 +61,21 @@
 .modal-header {
     display: flex;
     justify-content: space-between;
+}
+
+@media only screen and (max-width: 1000px)  {
+    .modal img {
+        float: initial;
+        width: 100%;
+        margin-top: 3%;
+    }
+
+    .modal-close-btn-mobile {
+        display: block;
+        margin-left: 95%;
+    }
+
+    .modal-close-btn {
+        display: none;
+    }
 }

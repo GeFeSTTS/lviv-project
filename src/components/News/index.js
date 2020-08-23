@@ -18,10 +18,17 @@ export default function News () {
     const [shouldNextButtonDisabled, setNextDisabled] = useState(false);
     const [shouldPrevButtonDisabled, setPrevDisabled] = useState(false);
     const [news, setNews] = useState([]);
+    const [mobileScreen, setMobileScreen] = useState(false);
 
     useEffect( () => {
+        const isMobilePhone = () => {
+            const width = window.screen.width;
+            width <= 1000 ? setMobileScreen(true) : setMobileScreen(false);
+        }
+
+        isMobilePhone();
         getAndParseNews();
-    }, [])
+    }, [mobileScreen])
 
     const isFirefox = () => {
         return navigator.userAgent.indexOf("Firefox") > -1;
@@ -115,7 +122,8 @@ export default function News () {
                     naturalSlideHeight={18}
                     totalSlides={news.length}
                     currentSlide={currentSlide}
-                    dragEnabled={false}
+                    dragEnabled={mobileScreen}
+                    isPlaying={mobileScreen}
                     isIntrinsicHeight
                 >
                     <Slider>

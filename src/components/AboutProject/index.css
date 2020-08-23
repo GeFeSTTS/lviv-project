@@ -48,4 +48,13 @@
         border: 1px solid #F05929;
         padding: 20px 15px;
     }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .about-project-article h5 {
+        font-size: 15px;
+        margin: 5px 0;
+    }
 }

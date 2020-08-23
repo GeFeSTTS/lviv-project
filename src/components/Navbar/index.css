@@ -36,14 +36,15 @@
 .bm-burger-button {
     position: absolute !important;
     top: 30% !important; 
-    width: 36px;
-    height: 30px;
+    width: 30px !important;
+    height: 25px !important;
     right: 36px;
-    left: 90% !important;
+    left: 85% !important;
     right: 0;
 }
 
 .bm-burger-bars {
+    height: 10% !important;
     background: #F05929 !important;
 }
 

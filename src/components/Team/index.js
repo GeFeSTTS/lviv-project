@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import ReactHtmlParser from 'react-html-parser';
 import nextButton from '../../assets/button-next.svg';
@@ -54,6 +54,17 @@ export default function Team () {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [shouldNextButtonDisabled, setNextDisabled] = useState(false);
     const [shouldPrevButtonDisabled, setPrevDisabled] = useState(false);
+    const [mobileScreen, setMobileScreen] = useState(false);
+
+    useEffect( () => {
+        const isMobilePhone = () => {
+            const width = window.screen.width;
+            width <= 1000 ? setMobileScreen(true) : setMobileScreen(false);
+        }
+
+        isMobilePhone();
+    }, [mobileScreen])
+
     const handleNextClick = () => {
         setPrevDisabled(false);
         setCurrentSlide((previousValue) => {
@@ -66,6 +77,7 @@ export default function Team () {
             }
         })
     }
+
 
     const isFirefox = () => {
         return navigator.userAgent.indexOf("Firefox") > -1;
@@ -94,9 +106,11 @@ export default function Team () {
             <div className="team-carousel">
                 <CarouselProvider
                     naturalSlideWidth={100}
-                    naturalSlideHeight={35}
+                    naturalSlideHeight={45}
                     totalSlides={TOTAL_SLIDES}
                     currentSlide={currentSlide}
+                    dragEnabled={mobileScreen}
+                    isPlaying={mobileScreen}
                     isIntrinsicHeight
                 >
                     <Slider>
